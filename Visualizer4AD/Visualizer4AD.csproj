@@ -71,6 +71,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Auth\LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -79,15 +83,27 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Auth\LoginViewModel.cs" />
+    <Compile Include="Auth\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Panes\GroupsTabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MsaglHelpers.cs" />
     <Compile Include="NullNode.cs" />
     <Compile Include="Panes\BasePane.cs" />
+    <Compile Include="Panes\GroupsPane.cs" />
+    <Compile Include="Panes\GroupsTabControl.xaml.cs">
+      <DependentUpon>GroupsTabControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -118,6 +134,10 @@
     <ProjectReference Include="..\ADConnector\ADConnector.csproj">
       <Project>{dba19f7b-92de-4c04-9655-7c3e1f85f0b1}</Project>
       <Name>ADConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\common\common.csproj">
+      <Project>{2c1c716c-8ec0-459c-9ffd-de452278ee51}</Project>
+      <Name>common</Name>
     </ProjectReference>
     <ProjectReference Include="..\viewmodel\viewmodel.csproj">
       <Project>{d9c8c2a6-6620-4d04-bfaf-a0e7f7e44255}</Project>

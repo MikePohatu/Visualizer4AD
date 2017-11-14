@@ -8,7 +8,7 @@ using Microsoft.Msagl.GraphViewerGdi;
 using System.Threading;
 using viewmodel;
 
-namespace Visualizer.Panes
+namespace Visualizer4AD.Panes
 {
     public abstract class BasePane : ViewModelBase
     {
